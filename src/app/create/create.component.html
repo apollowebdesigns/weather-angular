@@ -1,3 +1,8 @@
-<p>
-  create works!
-</p>
+<div class="left">
+
+  <input type="text" placeholder="temperature" #temperature>
+  <input type="text" placeholder="pressure" #pressure>
+  <input type="text" placeholder="humidity" #humidity>
+
+  <button (click)="addWeather(temperature.value,pressure.value,humidity.value)">Add a Weather Reading</button>
+</div>
