@@ -1,0 +1,10 @@
+<div class="right" *ngIf="weathers">
+
+  <h3>Weather Readings</h3>
+  <ul>
+    <li *ngFor="let weather of weathers | async">
+      <a [href]="weather.temperature" target="_blank">{{ weather.temperature }}</a>
+    </li>
+  </ul>
+
+</div>

@@ -29,3 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Useful links
 
 https://coursetro.com/posts/code/151/Angular-Ngrx-Store-Tutorial---Learn-Angular-State-Management
+
+
+### Upgrading from Angular 5 to 6
+
+https://stackoverflow.com/questions/49810580/error-local-workspace-file-angular-json-could-not-be-found
