@@ -13,6 +13,9 @@ export function reducer(state: Weather[] = [initialState], action: WeatherAction
     switch (action.type) {
         case WeatherActions.ADD_WEATHER:
             return [...state, action.payload];
+        case WeatherActions.REMOVE_WEATHER:
+            state.splice(action.payload, 1);
+            return state;
         default:
             return state;
     }

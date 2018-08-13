@@ -14,7 +14,7 @@ export class CreateComponent implements OnInit {
 
   constructor(private store: Store<AppState>) {}
 
-  addTutorial(temperature, pressure, humidity) {
+  addWeather(temperature, pressure, humidity) {
     this.store.dispatch(new WeatherActions.AddWeather({temperature: temperature, pressure: pressure, humidity: humidity}));
   }
 

@@ -2,7 +2,7 @@
 
   <h3>Weather Readings</h3>
   <ul>
-    <li *ngFor="let weather of weathers | async">
+    <li (click)="delWeather(i)" *ngFor="let weather of weathers | async; let i = index">
       <a [href]="weather.temperature" target="_blank">{{ weather.temperature }}</a>
     </li>
   </ul>
