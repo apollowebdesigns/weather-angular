@@ -9,6 +9,7 @@ import { reducer } from './reducers/weather.reducer';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 import { ObservationsComponent } from './observations/observations.component';
+import { LatestdataComponent } from './latestdata/latestdata.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ObservationsComponent } from './observations/observations.component';
     AppComponent,
     ReadComponent,
     CreateComponent,
-    ObservationsComponent
+    ObservationsComponent,
+    LatestdataComponent
   ],
   imports: [
     BrowserModule,
