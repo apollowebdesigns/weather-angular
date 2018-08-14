@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add your manual observations here</h1>
+  <div class="left">
+
+    <input type="text" placeholder="temperature" #temperature>
+    <input type="text" placeholder="pressure" #pressure>
+    <input type="text" placeholder="humidity" #humidity>
+  
+    <button (click)="addWeather(temperature.value,pressure.value,humidity.value)">Add a Weather Reading</button>
+  </div>   
+</div>

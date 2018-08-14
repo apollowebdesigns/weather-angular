@@ -8,13 +8,15 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './reducers/weather.reducer';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
+import { ObservationsComponent } from './observations/observations.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadComponent,
-    CreateComponent
+    CreateComponent,
+    ObservationsComponent
   ],
   imports: [
     BrowserModule,
