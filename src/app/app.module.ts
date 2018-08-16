@@ -2,7 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatToolbarModule, MatMenuModule, MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/material';
+import {
+  MatToolbarModule,
+  MatMenuModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatIconModule,
+  MatFormFieldModule, MatInputModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -12,6 +19,8 @@ import { CreateComponent } from './create/create.component';
 import { ObservationsComponent } from './observations/observations.component';
 import { LatestdataComponent } from './latestdata/latestdata.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
+import { ChartComponent } from './chart/chart.component';
 
 
 @NgModule({
@@ -20,7 +29,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ReadComponent,
     CreateComponent,
     ObservationsComponent,
-    LatestdataComponent
+    LatestdataComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +41,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ChartsModule,
     StoreModule.forRoot({
       weather: reducer
     })

@@ -2,9 +2,26 @@
   <h1>Add your manual observations here</h1>
   <div class="left">
 
-    <input type="text" placeholder="temperature" #temperature>
-    <input type="text" placeholder="pressure" #pressure>
-    <input type="text" placeholder="humidity" #humidity>
+    <!--<input type="text" placeholder="temperature" #temperature>-->
+    <!--<input type="text" placeholder="pressure" #pressure>-->
+    <!--<input type="text" placeholder="humidity" #humidity>-->
+
+    <mat-form-field>
+      <mat-label>temperature</mat-label>
+      <input matInput type="text" placeholder="temperature" #temperature>
+
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>pressure</mat-label>
+      <input matInput type="text" placeholder="pressure" #pressure>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>humidity</mat-label>
+      <input matInput type="text" placeholder="humidity" #humidity>
+    </mat-form-field>
   
     <button (click)="addWeather(temperature.value,pressure.value,humidity.value)">Add a Weather Reading</button>
   </div>   
