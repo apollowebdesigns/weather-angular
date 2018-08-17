@@ -21,6 +21,7 @@ import { LatestdataComponent } from './latestdata/latestdata.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
 import { ChartComponent } from './chart/chart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ChartComponent } from './chart/chart.component';
     MatFormFieldModule,
     MatInputModule,
     ChartsModule,
+    HttpClientModule,
     StoreModule.forRoot({
       weather: reducer
     })

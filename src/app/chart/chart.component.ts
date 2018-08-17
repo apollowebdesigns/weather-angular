@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import AveragedataService from './averagedata/averagedata.service';
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  constructor() { }
+  constructor(public averagedataService: AveragedataService) { }
 
   ngOnInit() {
+     this.averagedataService
+       .getAverageData()
+       .subscribe(data => console.log(data));
   }
 
   public barChartOptions: any = {
