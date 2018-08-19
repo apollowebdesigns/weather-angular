@@ -50,7 +50,25 @@ import { HttpClientModule } from '@angular/common/http';
       weather: reducer
     })
   ],
-  providers: [],
+  exports: [
+    ReadComponent
+  ],
+  providers: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ChartsModule,
+    HttpClientModule,
+    StoreModule,
+    ReadComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
