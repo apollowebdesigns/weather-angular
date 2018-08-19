@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { AveragedataService } from './averagedata.service';
+import AveragedataService from './averagedata.service';
 
 describe('AveragedataService', () => {
   beforeEach(() => {

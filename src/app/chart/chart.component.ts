@@ -2,21 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import AveragedataService from './averagedata/averagedata.service';
 
-@Component({
+const typeDecorator = Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
-})
+});
+
+@typeDecorator
 export class ChartComponent implements OnInit {
-
-  constructor(public averagedataService: AveragedataService) { }
-
-  ngOnInit() {
-     this.averagedataService
-       .getAverageData()
-       .subscribe(data => console.log(data));
-  }
-
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -29,6 +22,14 @@ export class ChartComponent implements OnInit {
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
     {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
   ];
+
+  constructor(public averagedataService: AveragedataService) { }
+
+  ngOnInit() {
+     this.averagedataService
+       .getAverageData()
+       .subscribe(data => console.log(data));
+  }
 
   // events
   public chartClicked(e: any): void {
