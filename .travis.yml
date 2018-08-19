@@ -27,4 +27,4 @@ deploy:
   project: "imagestore"
   skip_cleanup: true
 after_success:
-  - firebase deploy --project userddata --only hosting --token $FIREBASE_TOKEN
+  - firebase deploy --project imagestore-e1935 --only hosting --token $FIREBASE_TOKEN
