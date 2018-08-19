@@ -1,11 +1,13 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject, MockBackend } from '@angular/core/testing';
+import { HttpModule, Http, BaseRequestOptions, XHRBackend } from '@angular/http';
 
 import AveragedataService from './averagedata.service';
 
 describe('AveragedataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AveragedataService]
+      providers: [AveragedataService],
+    { provide: XHRBackend, useClass: MockBackend }
     });
   });
 
