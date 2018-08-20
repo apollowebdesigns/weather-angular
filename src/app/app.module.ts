@@ -22,6 +22,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
 import { ChartComponent } from './chart/chart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateComponent,
     ObservationsComponent,
     LatestdataComponent,
-    ChartComponent
+    ChartComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
