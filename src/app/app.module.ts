@@ -24,6 +24,8 @@ import { ChartComponent } from './chart/chart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MapComponent } from './map/map.component';
 
+import { reducers, effects } from './store';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -48,9 +50,8 @@ import { MapComponent } from './map/map.component';
     MatInputModule,
     ChartsModule,
     HttpClientModule,
-    StoreModule.forRoot({
-      weather: reducer
-    })
+    StoreModule.forFeature('products', reducers),
+    EffectsModule.forFeature(effects)
   ],
   exports: [
     ReadComponent
